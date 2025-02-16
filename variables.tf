@@ -17,7 +17,7 @@ variable "instances" {
 
 variable "allow_all" {
     type = string
-    default = "sg-0fea5e49e962e81c9"
+    default = "sg-06b1b57b365846051"
 }
 
 variable "zone_id" {
