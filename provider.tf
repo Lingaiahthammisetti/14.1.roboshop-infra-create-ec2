@@ -7,10 +7,10 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "roboshop-infra-create-ec2-remote-state"
+    bucket = "roboshop-ec2-remote-state"
     key    = "roboshop-create-ec2-key"
     region = "us-east-1"
-    dynamodb_table = "roboshop-infra-create-ec2-locking"
+    dynamodb_table = "roboshop-ec2-locking"
   }
 }
 

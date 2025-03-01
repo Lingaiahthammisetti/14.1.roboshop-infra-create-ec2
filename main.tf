@@ -9,7 +9,7 @@ resource "aws_instance" "roboshop_ec2" {
 }
 
 resource "aws_route53_record" "roboshop_r53" {
-  for_each = aws_instance.roboshop
+  for_each = aws_instance.roboshop_ec2
   zone_id = var.zone_id
   name    = each.key == "frontend" ? var.domain_name : "${each.key}.${var.domain_name}"
   type    = "A"
