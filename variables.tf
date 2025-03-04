@@ -11,7 +11,9 @@ variable "instances" {
     shipping = "t3.small"
     payment = "t3.micro"
     dispatch = "t3.micro"
-    frontend = "t3.micro"
+    web      = "t3.micro"   
+    //frontend = "t3.micro"
+
   }
 }
 
@@ -26,4 +28,10 @@ variable "zone_id" {
 
 variable "domain_name" {
     default = "lingaiah.online"
+}
+#This is used for ansible project only
+variable "ansible_master" {
+  default     = {
+    instance_type = "t3.small"
+  }
 }
